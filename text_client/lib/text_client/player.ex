@@ -4,10 +4,12 @@ defmodule TextClient.Player do
 
   # won, lost, good guess, bad guess, already used, initializing
   def play(game = %State{ tally: %{ game_state: :won } }) do 
+    IO.puts("#{game.tally.answer}")
     exit_with_message("You WON!")
   end
 
-  def play(game = %State{ tally: %{ game_state: :lost } }) do 
+  def play(game = %State{ tally: %{ game_state: :lost } }) do
+    IO.puts("The correct answer was #{game.tally.answer}")
     exit_with_message("Sorry, you lost.")
   end
 
