@@ -6,7 +6,6 @@ defmodule Hangman.Supervisor do
 
   def init(:ok) do 
     children = [
-      { Hangman.Server, name: Hangman.Server },
       { DynamicSupervisor, name: Hangman.GameSupervisor, strategy: :one_for_one } 
     ]
 
