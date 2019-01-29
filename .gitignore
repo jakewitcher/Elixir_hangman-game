@@ -1,0 +1,5 @@
+/gallows/_build
+/gallows/deps
+/gallows/config/prod.secret.exs
+/gallows/priv/static/
+/gallows/assets/node_modules
