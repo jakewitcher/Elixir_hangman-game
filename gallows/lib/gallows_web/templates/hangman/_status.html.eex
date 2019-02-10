@@ -8,9 +8,9 @@ Turns left: <%= @tally.turns_left %>
 
 <%= if game_over?(@tally) do %>
   <%= new_game_button(@conn) %>
-<%= else %>
+<% else %>
   <%= form_for(@conn, Routes.hangman_path(@conn, :make_move), [ as: :make_move, method: :put], fn f -> %>
     <%= text_input(f, :guess) %>
     <%= submit("Make next move") %>
-  <%= end) %>
-<%= end %>
+  <% end) %>
+<% end %>
